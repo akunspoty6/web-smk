@@ -1,6 +1,6 @@
 /vendor
 /node_modules
+/.phpunit.cache
 .env
 *.sqlite
 *.zip
-__pycache__
