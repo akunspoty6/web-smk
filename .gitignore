@@ -1,0 +1,6 @@
+/vendor
+/node_modules
+.env
+*.sqlite
+*.zip
+__pycache__
