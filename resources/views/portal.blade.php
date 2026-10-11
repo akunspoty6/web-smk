@@ -89,14 +89,13 @@
       <!-- Action Buttons -->
       <div class="hidden sm:flex items-center gap-3">
         @auth
-          <div class="flex items-center gap-2 bg-emerald-50 text-emerald-800 px-3 py-1.5 rounded-lg border border-emerald-200 text-xs font-bold">
-            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-            <span>{{ Auth::user()->name }} ({{ Auth::user()->role }})</span>
-          </div>
+          <a href="{{ url('/admin/dashboard') }}" class="inline-flex items-center gap-2 px-3.5 py-2 text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-500 rounded-lg shadow-sm transition-all">
+            <i data-lucide="layout-dashboard" class="w-3.5 h-3.5"></i> Dashboard CMS PPDB
+          </a>
           <form action="{{ url('/logout') }}" method="POST" class="inline">
             @csrf
-            <button type="submit" class="inline-flex items-center gap-1.5 px-3 py-2 text-xs font-semibold text-red-600 hover:text-red-700 bg-red-50 hover:bg-red-100 rounded-lg transition-colors">
-              <i data-lucide="log-out" class="w-3.5 h-3.5"></i> Keluar
+            <button type="submit" class="inline-flex items-center gap-1.5 px-3 py-2 text-xs font-semibold text-red-600 hover:text-red-700 bg-red-50 hover:bg-red-100 rounded-lg transition-colors" title="Keluar">
+              <i data-lucide="log-out" class="w-3.5 h-3.5"></i>
             </button>
           </form>
         @else
